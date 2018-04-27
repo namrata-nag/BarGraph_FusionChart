@@ -1,8 +1,115 @@
-<fusioncharts
-    [width]="width"
-    [height]="height"
-    [type]="type"
-    [dataFormat]="dataFormat"
-    [dataSource]="dataSource">
-</fusioncharts>
+<div class="main">
+   <div id="header">
+    <div id="logo">
+       <span id="logo1">NAVBAR</span>
+    </div>
+    <div>
+    
+    </div></div>
+<div class="card_data">
+    
+    <a ><p-card class="box" [style]="{width: '420px'}" styleClass="ui-card-shadow">
+       <p-header>
+        <img  src="Card" src="assets/graph.png">
+       </p-header>
+       <div>Views<span class="per"> +%60</span>
+       </div><div>6,520 / day</div>
+    </p-card></a>
+   <a><p-card class="box" [style]="{width: '420px'}" styleClass="ui-card-shadow">
+      <p-header>
+         <img  src="Card" src="assets/graph.png">
+      </p-header>
+      <div>Users<span class="per"> +%45</span>
+      </div><div>6,520 / day</div>
+   </p-card></a>
+   <a><p-card class="box" [style]="{width: '420px'}" styleClass="ui-card-shadow">
+      <p-header >
+          <img  src="Card" src="assets/graph.png">
+      </p-header>
+      <div>Sales<span class="per"> +%90</span>
+      </div><div> Rs 22,650 / week</div>
+      </p-card></a>
+</div>
 
+
+<!--////////////////////////////////////////////////////////////////////////////-->
+<p-dialog  claass="dialog" [header]="  PROFIT/LOSS" [(visible)]="display" [modal]="true"  [responsive]="true" [width]="800" [minWidth]="500" [minY]="150">
+
+<p-chart class="box" (onDataSelect)="selectData($event)" type="line" [data]="data1" [options]="options"></p-chart>
+</p-dialog>
+
+<!--////////////////////////////////////////////////////////////////////////////-->
+<div class="row data">
+<div class="col col-lg-9 toggle"><p-tabView>
+    <p-tabPanel header="Header 1">
+      <div class="char1">
+        <p-chart class="box" (onDataSelect)="selectData($event)"   type="bar" [data]="data2" [options]="options"></p-chart>
+       </div>
+     </p-tabPanel>
+    <p-tabPanel header="Header 2">
+       <div class="char1">
+           <div class="box">
+            <div class="box-header with-border">
+                </div>
+           <div class="box-body">
+              <table class="table table-bordered"> 
+                  <tr class="header1">
+                  <th style="width: 10px">#</th>
+                  <th>Task</th>
+                  <th>Progress</th>
+                  <th style="width: 40px">Label</th>
+                </tr>
+                <tr>
+                  <td>1.</td>
+                  <td>SBI</td>
+                  <td>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                    </div>
+                  </td>
+                  <td><span class=" bg-red">55%</span></td>
+                </tr>
+                 <tr>
+                  <td>2.</td>
+                  <td>HSBC</td>
+                  <td>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
+                    </div>
+                  </td>
+                  <td><span class=" bg-yellow">70%</span></td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>HDFC</td>
+                  <td>
+                    <div class="progress progress-xs  active">
+                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+                    </div>
+                  </td>
+                  <td><span class=" bg-light-blue">30%</span></td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>CANARA</td>
+                  <td>
+                    <div class="progress progress-xs  active">
+                      <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                    </div>
+                  </td>
+                  <td><span class=" bg-green">90%</span></td>
+                </tr>
+                  </table></div>    
+        </div>
+    <!--<p-chart class="box" (onDataSelect)="selectData($event)"   type="line" [data]="data2" [options]="options"></p-chart> -->
+    </div> </p-tabPanel>
+</p-tabView></div>
+<div class="col col-lg-3"><div class="dummy1">
+    Content
+</div>
+<div class="dummy2">
+
+    Content
+</div></div>
+</div>
+  </div>     

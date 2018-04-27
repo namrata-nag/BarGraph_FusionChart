@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FusionChartsModule } from 'angular4-fusioncharts';
-import * as FusionCharts from 'fusioncharts';
-import * as Charts from 'fusioncharts/fusioncharts.charts';
-import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
+import { WeatherService} from './weather.service';
+import {ChartModule} from 'primeng/chart';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-
+import {DialogModule} from 'primeng/dialog';
+import {CardModule} from 'primeng/card';
+import {TabViewModule} from 'primeng/tabview';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -13,9 +15,15 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-      FusionChartsModule.forRoot(FusionCharts, Charts, FintTheme)
+    BrowserModule,
+    BrowserAnimationsModule,
+    ChartModule,
+    DialogModule,
+    CardModule,
+    TabViewModule,
+    TableModule
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
