@@ -1,115 +1,27 @@
-<div class="main">
-   <div id="header">
-    <div id="logo">
-       <span id="logo1">NAVBAR</span>
-    </div>
-    <div>
-    
-    </div></div>
-<div class="card_data">
-    
-    <a ><p-card class="box" [style]="{width: '420px'}" styleClass="ui-card-shadow">
-       <p-header>
-        <img  src="Card" src="assets/graph.png">
-       </p-header>
-       <div>Views<span class="per"> +%60</span>
-       </div><div>6,520 / day</div>
-    </p-card></a>
-   <a><p-card class="box" [style]="{width: '420px'}" styleClass="ui-card-shadow">
-      <p-header>
-         <img  src="Card" src="assets/graph.png">
-      </p-header>
-      <div>Users<span class="per"> +%45</span>
-      </div><div>6,520 / day</div>
-   </p-card></a>
-   <a><p-card class="box" [style]="{width: '420px'}" styleClass="ui-card-shadow">
-      <p-header >
-          <img  src="Card" src="assets/graph.png">
-      </p-header>
-      <div>Sales<span class="per"> +%90</span>
-      </div><div> Rs 22,650 / week</div>
-      </p-card></a>
-</div>
-
-
-<!--////////////////////////////////////////////////////////////////////////////-->
-<p-dialog  claass="dialog" [header]="  PROFIT/LOSS" [(visible)]="display" [modal]="true"  [responsive]="true" [width]="800" [minWidth]="500" [minY]="150">
-
-<p-chart class="box" (onDataSelect)="selectData($event)" type="line" [data]="data1" [options]="options"></p-chart>
-</p-dialog>
-
-<!--////////////////////////////////////////////////////////////////////////////-->
-<div class="row data">
-<div class="col col-lg-9 toggle"><p-tabView>
-    <p-tabPanel header="Header 1">
-      <div class="char1">
-        <p-chart class="box" (onDataSelect)="selectData($event)"   type="bar" [data]="data2" [options]="options"></p-chart>
-       </div>
-     </p-tabPanel>
-    <p-tabPanel header="Header 2">
-       <div class="char1">
-           <div class="box">
-            <div class="box-header with-border">
-                </div>
-           <div class="box-body">
-              <table class="table table-bordered"> 
-                  <tr class="header1">
-                  <th style="width: 10px">#</th>
-                  <th>Task</th>
-                  <th>Progress</th>
-                  <th style="width: 40px">Label</th>
-                </tr>
-                <tr>
-                  <td>1.</td>
-                  <td>SBI</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                    </div>
-                  </td>
-                  <td><span class=" bg-red">55%</span></td>
-                </tr>
-                 <tr>
-                  <td>2.</td>
-                  <td>HSBC</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                    </div>
-                  </td>
-                  <td><span class=" bg-yellow">70%</span></td>
-                </tr>
-                <tr>
-                  <td>3.</td>
-                  <td>HDFC</td>
-                  <td>
-                    <div class="progress progress-xs  active">
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
-                  <td><span class=" bg-light-blue">30%</span></td>
-                </tr>
-                <tr>
-                  <td>4.</td>
-                  <td>CANARA</td>
-                  <td>
-                    <div class="progress progress-xs  active">
-                      <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                    </div>
-                  </td>
-                  <td><span class=" bg-green">90%</span></td>
-                </tr>
-                  </table></div>    
+ <div class="main">
+   <div class="row" id="top" >
+       <div class="logo">
+            <div class="col col-xs-1"><span class="glyphicon glyphicon-align-justify " id="side" (click)="visibleSidebar1 = true"> </span></div>
+            <div class="col col-xs-1"><span data-toggle="collapse" data-target="#searching" class="glyphicon glyphicon-search clickable" id="search"> </span></div>
+            <div class="col col-xs-3"></div>
+            <div class="col col-xs-5"><span id="logo1">NAVBAR</span></div>
         </div>
-    <!--<p-chart class="box" (onDataSelect)="selectData($event)"   type="line" [data]="data2" [options]="options"></p-chart> -->
-    </div> </p-tabPanel>
-</p-tabView></div>
-<div class="col col-lg-3"><div class="dummy1">
-    Content
-</div>
-<div class="dummy2">
+        
+        <p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
+           <h1 style="font-weight:normal">Left Sidebar</h1>
+        </p-sidebar></div>
+        <div id="searching" class="row collapse " >
+           <form class="form-inline">
+           <input class="form-control mr-sm-8 " type="search" placeholder="Search" aria-label="Search">
+           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+           </form>
+        </div>
+   <div class="row" >
+      <bar-graph></bar-graph>
+   </div>
+   <div  class="row" >
+     <table-model></table-model>
+    </div>
 
-    Content
-</div></div>
-</div>
-  </div>     
+ </div>
+

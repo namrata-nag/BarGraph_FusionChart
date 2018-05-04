@@ -1,0 +1,21 @@
+.donut{font-size: 20px;
+}
+.btn{
+    margin:2%;
+
+}
+#tbl{
+    border-color: #fff;
+}
+tr{
+    border-color: #fff;
+}
+td{
+    border-color: #fff;
+}
+#borderless {
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}

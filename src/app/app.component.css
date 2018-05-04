@@ -1,243 +1,59 @@
 body{
-    background: #000;
+      margin: 0%;
+padding:0%;}
+     
+.main{
+    margin: 0%;
+      
 }
-*{
-    
-    margin:0px;padding:0px;
-}
-.card_data{
-display: flex;
-justify-content: space-around;
-  text-align: justify;
-  margin-top:20px;
-  margin-bottom: 20px;
-
- 
-  padding-bottom: 0px;
-  font-size: 30px;
-    
-}
-.box > img{
-    box-sizing: content-box;
-    width:10px;
-    margin:0px;
-}
-.footer{
-    margin: 0px;
-    padding:0px;
-}
-.per{
-    float: right;
-    font-size: 20px;
-    margin-right: 10px;
-}
-.char1{
-    width:800px;
-    height:500px;
-}
-   
-.dialog .ui-dialog-titlebar{
-    background: #fff;
-}
-.chart_table{
-     width:100%;;
-    height:500px;
-    float:left;
-}
-.dummy1{
-     margin-top: 5px;
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-    padding-top:25px;
-    width:350px;
-    height: 150px;
-    margin-bottom: 25px;
-    background: #29babc;
-}
-.dummy2{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-    padding-top:25px;
-    width:350px;
-    height: 150px;
-   
-    margin-bottom: 25px;
-    background: #e2a218
-}
-
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-.data{
-    
-    padding:35px;
-}
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////*/
-
-*{
-    margin:0px;padding:0px;
-}
-
-#header{
-    width:100%;
-    height:80px;
+#top{
+    margin: 0%;
     background: #5e6370;
-  
-
 }
-#navbar{
-    width:1000px;
-    height: 80px;
-    float:right;
-
-}
-
-#navbar>li{
-    width:250px;
-    list-style: none;
-    float:left;
-
-}
-.link{
-    display:block;
-    color:white;
-    line-height: 80px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:20px;
-    text-decoration: none;
-}
-
-#logo{
-    width:250px;
-    height:80px;
-    float: left;
-    display:block;
-    padding-left: 40px;
-    text-align: center;
+.logo{
     
+    height: 100px;
+  
+    
+}
+#side{
+   margin:40%;
+    font-size: 30px;
+}
+#search{
+     margin:40%;
+    font-size: 30px;
+}
+#searching{
+    margin:0%;
+   padding-left:40%; 
+ 
+    background: rgba(0,0,0,0.15);
+}
+.form-inline{
+    margin: 5%;
 }
 #logo1{
-    color:#fff;
-    line-height: 80px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:30px;
-    text-decoration: none;
-}
-@media screen and (max-width:1260px){
+  
+    color: white;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size:75px;
    
-#navbar{
-    width:800px;
 }
 
-#navbar>li{
-    width:200px;
-}
-#logo{
-    width:200px;
-    height:80px;
-   }
+.glyphicon{
+    color: #fff;
+     background: #5e6370;
 }
 
-@media screen and (max-width:1060px){
-     #header{
-    width:100%;
-    height:60px;
-    position: relative;
-    top:80px;
-   }
-#navbar{
-    width:100%;
-    height:60px;
-    float:right;
+.btn{
+      background: #5e6370;
+      border:1px solid #5e6370;
 }
-
-#navbar>li{
-    width:25%;
-    list-style: none;
-    float:left;
-
-}
-
-.link{
-    line-height: 60px;
-font-size:16px;}
-   
-#logo{
-    width:200px;
-    height:80px;
-    float: left;
-    position:absolute;
-    top:-80px;
+.row{
+    margin:2% 3% 0% 3%;
     
 }
-/*#logo1{
-    color:#d14c27;
-    line-height: 80px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:30px;
-    text-decoration: none;
+/*input{
+    width:50px;
 }*/
-}
-
-@media screen and (max-width:400px){
-     #header{
-    width:100%;
-    height:60px;
-    
-   }
-#navbar{
-    width:100%;
-    height:60px;
-    float:none;
-}
-
-#navbar>li{
-    border-bottom: 1px solid white;
-    width:100%;
-    list-style: none;
-    float:none;
-
-}
-
-.link{
-    display:block;
-    line-height: 60px;
-font-size:16px;
-background: #333;}
-
-/*#logo1{
-    color:#d14c27;
-    line-height: 80px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:30px;
-    text-decoration: none;
-}*/
-}
-   
-.link:hover{
-    color: #f4a235;
-    text-decoration: none;
-}
-
-table{
-    font-size: 25px;
-   font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-}
-.header1{
-    text-decoration: none;
-    background:#77756f;
-     color: #fff;
-
-}
-.ui-tabview-nav{
-    font-size: 50px;
-}
