@@ -1,0 +1,26 @@
+input{
+    width:1200px;
+    height: 40px;
+    margin-top:3%;
+    border-radius: 3%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-top: 0px;
+}
+#basic-addon2{
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+	height: 40px;
+
+}
+.glyphicon{
+    padding: 2%;
+    font-size:20px;
+}
+.input-group {
+	padding-top: 20px;
+}

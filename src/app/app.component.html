@@ -1,27 +1,5 @@
- <div class="main">
-   <div class="row" id="top" >
-       <div class="logo">
-            <div class="col col-xs-1"><span class="glyphicon glyphicon-align-justify " id="side" (click)="visibleSidebar1 = true"> </span></div>
-            <div class="col col-xs-1"><span data-toggle="collapse" data-target="#searching" class="glyphicon glyphicon-search clickable" id="search"> </span></div>
-            <div class="col col-xs-3"></div>
-            <div class="col col-xs-5"><span id="logo1">NAVBAR</span></div>
-        </div>
-        
-        <p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
-           <h1 style="font-weight:normal">Left Sidebar</h1>
-        </p-sidebar></div>
-        <div id="searching" class="row collapse " >
-           <form class="form-inline">
-           <input class="form-control mr-sm-8 " type="search" placeholder="Search" aria-label="Search">
-           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-           </form>
-        </div>
-   <div class="row" >
-      <bar-graph></bar-graph>
-   </div>
-   <div  class="row" >
-     <table-model></table-model>
-    </div>
 
- </div>
+<header-root></header-root>
+<search-root></search-root>
 
+<graph-root></graph-root>

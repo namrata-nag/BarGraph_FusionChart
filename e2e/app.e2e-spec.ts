@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('banking App', () => {
+describe('wipro-finance App', () => {
   let page: AppPage;
 
   beforeEach(() => {
