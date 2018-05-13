@@ -1,5 +1,3 @@
-
-<header-root></header-root>
-<search-root></search-root>
-
-<graph-root></graph-root>
+<div class="routeContainer" [@routerAnimation]="getDepth(myOutlet)" >
+<router-outlet #myOutlet="outlet"></router-outlet>
+</div>

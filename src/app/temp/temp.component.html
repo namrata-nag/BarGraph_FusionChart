@@ -1,0 +1,98 @@
+<!--search reasult page-->
+<div class="container">
+    <div class="row">
+        <div class=" col-xs-1 col-sm-1 col-lg-1"><button class="back" (click)="back()"><span class="glyphicon glyphicon-chevron-left " style="font-weight:normal;"></span></button></div>
+        <div class="col-xs-1 col-sm-1 col-lg-1"></div>
+        <div class=" col-xs-8 col-sm-8 col-lg-8 search-bar">
+          <search-root></search-root>
+        </div>
+        <div class=" col-xs-2 col-sm-2 col-lg-2"></div>  
+    </div>
+</div>
+<div class="container1">
+       nlp data
+</div>
+<div class="container-fluid" style="padding-top:30px;background:#f1f1f1; height:100%;">
+  <button  color="primary" data-toggle="modal" data-target="#feedbackModal" class="feedback-button">Feedback</button>
+  <div class="row" style="width: auto;margin: auto;">
+    <div *ngIf="!showSbuChart && !showVerChart && !showAccChart && !showTimeLineChart &&!showCompareTimeChart" style="margin: auto;text-align:center;padding-top:150px;">
+        
+        Please Wait..        
+    </div>
+    <div *ngIf="showSbuChart" class="col-md-6 col-sm-12" style="margin-bottom:50px;">
+   
+          <p-chart width="100px" type="doughnut" #doughnut [data]="pieData" (onDataSelect)="selectPie($event)" [options]="options"></p-chart>          
+    
+    </div>
+    <div class="col-md-6 col-sm-12" *ngIf='showVerChart' style="margin-bottom:50px;">
+              <p-chart #verBarChart type="bar" (onDataSelect)="getAccounts($event)" [data]="barChartdata"></p-chart>          
+      
+    </div>
+    <div class="col-md-6 col-sm-12" *ngIf='showAccChart' style="position:relative;margin-bottom:50px;">
+      <div style="overflow-x:scroll;overflow-y:auto;height:350px;">
+          <p-chart style="position:absolute;height:400px;width:2000px;" #accBarChart type="bar" (onDataSelect)="getLineChart($event)" [data]="accBarChartdata"></p-chart>          
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12" *ngIf='showTimeLineChart' style="margin-bottom:50px;">
+      <div>
+          <p-chart #accTimeLineChart type="line" [data]="accTimeLineChartdata"></p-chart>          
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12" *ngIf='showCompareTimeChart' style="margin-bottom:50px;">
+      <div>
+          <p-chart #compareBarChart type="bar" (onDataSelect)="getLineChart($event)" [data]="compareBarChartdata"></p-chart>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12" *ngIf='showMultiCompareTimeChart' style="margin-bottom:50px;">
+      <div>
+          <p-chart #compareMultiBarChart type="bar" (onDataSelect)="getLineChart($event)" [data]="compareMultiBarChartdata"></p-chart>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12" *ngIf="noData" style="margin-top:100px;text-align:center;">
+      <h3>Oops!! We could't find result for this query.<br>Please provide feedback to help us.</h3>
+    </div>
+  </div>
+</div>
+
+<div id="feedbackModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <!--<div class="modal-content">-->
+      <!--<div class="modal-header">-->
+        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        <!--<h4 class="modal-title">Feedback</h4>
+        <mat-icon>
+          <a data-dismiss="modal" style="cursor:pointer;">close</a>
+        </mat-icon>
+      </div>
+      <div class="modal-body">
+        <form>
+          <mat-form-field style="width:100%;">
+            <input matInput value={{query}} disabled placeholder="Query">
+          </mat-form-field>
+          <mat-form-field style="width:100%;">
+            <textarea matInput placeholder="Comments"></textarea>
+          </mat-form-field>
+          Was this Result helpful?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-group>
+            <mat-radio-button value="GOOD">
+              <i class="material-icons">thumb_up</i>
+            </mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button value="BAD">
+              <i class="material-icons">thumb_down</i>
+            </mat-radio-button>
+          </mat-radio-group>
+          <br>
+          <hr>
+          <button data-dismiss="modal" mat-raised-button style="float: right;" color="primary" (click)="submitFeedback()">Submit</button>
+        </form>
+      </div>-->
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div> -->
+    <!--</div>-->
+
+  <!--</div>-->
+<!--</div>-->
+<!--search reasult page end-->
