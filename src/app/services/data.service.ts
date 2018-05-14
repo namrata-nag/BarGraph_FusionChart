@@ -12,8 +12,6 @@ export class DataService extends dataStore {
 
   testNLP = new BehaviorSubject(null);
 
-  nlpUrl = 'http://ec2-52-203-74-121.compute-1.amazonaws.com:8081/query?query=';
-  loginUrl = 'http://localhost:8008/v1/api/revenue/login';
 
   constructor( private http: HttpClient) {
     super();
